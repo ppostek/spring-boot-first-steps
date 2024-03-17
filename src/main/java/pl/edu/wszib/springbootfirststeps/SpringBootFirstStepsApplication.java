@@ -12,4 +12,12 @@ public class SpringBootFirstStepsApplication {
         SpringApplication.run(SpringBootFirstStepsApplication.class, args);
     }
 
+    /**
+     * Utwórz nowy pakiet o nazwie "task1", umieść w nim klasy o następującej strukturze:
+     * MyFirstComponentCommandLineRunner (klasa implementuje interfejs CommandLineRunner i loguje do konsoli "My first run")
+     * MyFirstConfiguredCommandLineRunner, klasa posiada zależność wstrzykiwaną przez konstruktor do klasy MyFirstComponentCommandLineRunner
+     * i loguje do konsoli "My first configured run" oraz wywołuje metodę "example" w klasie MyFirstComponentCommandLineRunner
+     * MyFirstCommandLineRunnerConfiguration - klasa konfiguracyjna, tworząca instancję MyFirstConfiguredCommandLineRunner i przekazująca ją do kontenera Spring IoC (za pomocą adnotacji @Bean)
+     */
+
 }
