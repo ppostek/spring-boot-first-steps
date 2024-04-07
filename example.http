@@ -12,5 +12,12 @@ Cookie: JSESSIONID=CC93D7CAF2D3FDC6C7CD14ED7892EAB8
 }
 
 ### Mój PUT - TODO przygotować
+PUT http://localhost:8080/tasks/0ad894a8-bf02-4830-aa7e-e5692381ed0e
+Content-Type: application/json
+
+{
+  "name": "Test"
+}
+
 
 ### Mój DELETE

@@ -2,10 +2,13 @@ package pl.edu.wszib.springbootfirststeps;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import pl.edu.wszib.springbootfirststeps.configuration.ConfiguredCommandLineRunner;
+import pl.edu.wszib.springbootfirststeps.configurationproperties.TaskConfigurationProperties;
 import pl.edu.wszib.springbootfirststeps.examplescanned.DiscoveredCommandLineRunner;
 
 @SpringBootApplication
+@EnableConfigurationProperties(TaskConfigurationProperties.class)
 public class SpringBootFirstStepsApplication {
 
     public static void main(String[] args) {

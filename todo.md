@@ -1,0 +1,1 @@
+- [ ] utworzyć konfigurację umieszczoną w sekcji yaml "mytask" zawierającą 2 zmienne "prefix" i "suffix" typu string, w ramach controllera we wszystkich żądaniach wypisywać ich wartości na ekran

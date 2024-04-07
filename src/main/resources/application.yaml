@@ -1,0 +1,14 @@
+spring:
+  liquibase:
+    enabled: false
+  security:
+    user:
+      name: user
+      password: password
+logging:
+  level:
+    root: debug
+myapplication:
+  tasks:
+    enabled: false
+    name: 'Moja nazwa'
