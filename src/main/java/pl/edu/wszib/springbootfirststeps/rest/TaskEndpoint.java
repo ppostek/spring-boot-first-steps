@@ -1,6 +1,7 @@
 package pl.edu.wszib.springbootfirststeps.rest;
 
 import org.springframework.web.bind.annotation.*;
+import pl.edu.wszib.springbootfirststeps.configurationproperties.MyTaskConfigurationProperties;
 import pl.edu.wszib.springbootfirststeps.configurationproperties.TaskConfigurationProperties;
 
 import java.util.UUID;
@@ -9,9 +10,13 @@ import java.util.UUID;
 @RequestMapping("/tasks")
 public class TaskEndpoint {
     private final TaskConfigurationProperties taskConfigurationProperties;
+    private final MyTaskConfigurationProperties myTaskConfigurationProperties;
 
-    public TaskEndpoint(TaskConfigurationProperties taskConfigurationProperties) {
+    public TaskEndpoint(
+            TaskConfigurationProperties taskConfigurationProperties,
+            MyTaskConfigurationProperties myTaskConfigurationProperties) {
         this.taskConfigurationProperties = taskConfigurationProperties;
+        this.myTaskConfigurationProperties = myTaskConfigurationProperties;
     }
 
     // @PathVariable
@@ -21,6 +26,8 @@ public class TaskEndpoint {
     public void getTaskById(
             @PathVariable String id,
             @RequestParam(required = false) String name) {
+        System.out.println(myTaskConfigurationProperties.prefix());
+        System.out.println(myTaskConfigurationProperties.suffix());
         if (taskConfigurationProperties.enabled()) {
             System.out.println("Id = " + id);
             System.out.println("name = " + name);
@@ -32,6 +39,8 @@ public class TaskEndpoint {
 
     @PostMapping
     public Task createTask(@RequestBody CreateTask task) {
+        System.out.println(myTaskConfigurationProperties.prefix());
+        System.out.println(myTaskConfigurationProperties.suffix());
         System.out.println(task);
         return new Task(UUID.randomUUID(), "Test");
     }
@@ -40,6 +49,8 @@ public class TaskEndpoint {
     public void updateTask(
             @PathVariable String id,
             @RequestBody Task task) {
+        System.out.println(myTaskConfigurationProperties.prefix());
+        System.out.println(myTaskConfigurationProperties.suffix());
         System.out.println(task);
     }
 

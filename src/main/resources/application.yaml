@@ -10,5 +10,8 @@ logging:
     root: debug
 myapplication:
   tasks:
-    enabled: false
+    enabled: true
     name: 'Moja nazwa'
+mytask:
+  prefix: 'My prefix'
+  suffix: 'My suffix'
