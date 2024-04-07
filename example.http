@@ -1,0 +1,16 @@
+### Mój GET
+GET http://localhost:8080/tasks/moje_id?name=test
+Cookie: JSESSIONID=CC93D7CAF2D3FDC6C7CD14ED7892EAB8
+
+### Mój POST
+POST http://localhost:8080/tasks
+Content-Type: application/json
+Cookie: JSESSIONID=CC93D7CAF2D3FDC6C7CD14ED7892EAB8
+
+{
+  "name": "Test"
+}
+
+### Mój PUT - TODO przygotować
+
+### Mój DELETE
